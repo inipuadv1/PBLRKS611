@@ -1,0 +1,3 @@
+ [Key.alt_l]  [Key.tab]  [Key.shift] Payload berhasil di eksekusi dan setiap ketikan akan ditangkap oleh server listener
+
+ [Key.backspace] 1212121 [Key.tab] dsfsdfdfd [Key.backspace]  [Key.alt_l]  [Key.tab]  [Key.esc] 
